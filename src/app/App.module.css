@@ -1,4 +1,7 @@
 .app {
-	display: flex;
-	flex-direction: column;
+	padding: 12px;
+}
+
+.header {
+	margin-bottom: 12px;
 }

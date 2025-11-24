@@ -1,0 +1,6 @@
+.toolbar {
+	display: flex;
+	padding: 12px;
+	justify-content: flex-end;
+	border-bottom: 1px solid var(--border);
+}

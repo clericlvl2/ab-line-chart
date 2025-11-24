@@ -3,6 +3,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import "./index.css";
+import { ThemeProvider } from "@shared";
 
 export const getRootElement = (): HTMLElement => {
 	const el = document.getElementById("root");
@@ -18,6 +19,8 @@ const root = createRoot(getRootElement());
 
 root.render(
 	<StrictMode>
-		<App />
+		<ThemeProvider>
+			<App />
+		</ThemeProvider>
 	</StrictMode>,
 );

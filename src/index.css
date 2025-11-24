@@ -1,5 +1,20 @@
 :root {
-	--color-bg: black;
-	--color-text: white;
-	--color-primary: red;
+	--bg: white;
+	--bg-secondary: #f4f4f4;
+	--text: #222;
+	--border: #ddd;
+}
+
+:root[data-theme="dark"] {
+	--bg: #121212;
+	--bg-secondary: #1f1f1f;
+	--text: #f0f0f0;
+	--border: #333;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--bg);
+	color: var(--text);
 }
