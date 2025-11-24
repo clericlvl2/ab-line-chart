@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"target": "ES2022",
+		"esModuleInterop": true,
+		"types": ["node"],
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+		"sourceMap": true,
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+		"strict": true,
+		"jsx": "react-jsx",
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"noUncheckedSideEffectImports": true,
+		"moduleDetection": "auto",
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@app": ["./src/app"],
+			"@dashboard": ["./src/dashboard"],
+			"@shared": ["./src/shared"]
+		},
+		"include": ["src"]
+	}
+}
