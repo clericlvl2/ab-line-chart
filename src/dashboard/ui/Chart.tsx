@@ -32,7 +32,7 @@ export const Chart = () => {
 			stroke={color}
 			fill={color}
 			name={name}
-			// isAnimationActive={false}
+			isAnimationActive={false}
 		/>
 	));
 
