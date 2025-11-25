@@ -1,4 +1,30 @@
 .chart {
-	padding: 24px;
-	color: var(--text);
+	width: 100%;
+	max-height: 70vh;
+	box-sizing: border-box;
+	aspect-ratio: 1.618;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 20px;
+}
+
+@media (min-width: 671px) and (max-width: 1300px) {
+	.chart {
+		padding: 16px;
+		max-height: 65vh;
+	}
+}
+
+@media (max-width: 670px) {
+	.chart {
+		padding: 12px;
+		max-height: 60vh;
+		aspect-ratio: 1.2;
+	}
+}
+
+@media (min-width: 1301px) {
+	.chart {
+		padding: 24px;
+	}
 }

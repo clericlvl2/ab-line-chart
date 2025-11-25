@@ -1,7 +1,39 @@
-.button {
-	padding: 8px 12px;
-	border-radius: 8px;
+.themePicker {
+	width: max-content;
+	display: flex;
+	align-items: center;
+	gap: 4px;
 	background: var(--bg-secondary);
 	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 2px;
+	height: 34px;
+	box-sizing: border-box;
+}
+
+.themePicker__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 26px;
+	height: 26px;
+	border: none;
+	border-radius: 6px;
+	background: transparent;
+	color: var(--text);
 	cursor: pointer;
+	transition: all 0.2s;
+	opacity: 0.6;
+	font-size: 16px;
+}
+
+.themePicker__button:hover {
+	opacity: 1;
+	background: var(--hover);
+}
+
+.themePicker__button--active {
+	opacity: 1;
+	background: var(--bg);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }

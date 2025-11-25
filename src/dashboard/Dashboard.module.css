@@ -1,12 +1,33 @@
-.wrapper {
-	height: 100%;
+.dashboard {
 	display: flex;
 	flex-direction: column;
+	gap: 20px;
 	background: var(--bg);
-	color: var(--text);
+	border-radius: 8px;
+	padding: 20px;
+	border: 1px solid var(--border);
 }
 
-.content {
+.dashboard__toolbar {
+	flex-shrink: 0;
+}
+
+.dashboard__content {
 	flex: 1;
-	padding: 16px;
+	min-height: 0;
+}
+
+@media (min-width: 671px) and (max-width: 1300px) {
+	.dashboard {
+		gap: 16px;
+		padding: 16px;
+	}
+}
+
+@media (max-width: 670px) {
+	.dashboard {
+		gap: 12px;
+		padding: 12px;
+		border-radius: 6px;
+	}
 }

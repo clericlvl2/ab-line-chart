@@ -1,7 +1,53 @@
 .app {
-	padding: 12px;
+	min-height: 100vh;
+	padding: 20px;
+	background: var(--bg);
+	color: var(--text);
 }
 
-.header {
-	margin-bottom: 12px;
+.app__header {
+	max-width: 1300px;
+	margin: 0 auto 24px;
+	padding: 0 16px;
+}
+
+.app__header h1 {
+	font-size: 28px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.app__main {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+@media (min-width: 671px) and (max-width: 1300px) {
+	.app {
+		padding: 16px;
+	}
+
+	.app__header {
+		margin-bottom: 20px;
+		padding: 0 12px;
+	}
+
+	.app__header h1 {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 670px) {
+	.app {
+		padding: 12px;
+	}
+
+	.app__header {
+		margin-bottom: 16px;
+		padding: 0 8px;
+	}
+
+	.app__header h1 {
+		font-size: 20px;
+	}
 }
