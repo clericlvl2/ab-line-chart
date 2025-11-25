@@ -21,6 +21,7 @@ export class ThemeService {
 		const current = this.storage.get(StorageKey.Theme);
 
 		if (current) {
+			this.applyTheme(current);
 			return;
 		}
 
