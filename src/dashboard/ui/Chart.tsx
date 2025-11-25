@@ -5,14 +5,19 @@ import {
 	XAxis,
 	YAxis,
 } from "recharts";
+import type { Props as YAxisProps } from "recharts/types/cartesian/YAxis";
 import { useChartData } from "../services/СhartService/ChartDataProvider";
 import styles from "./Chart.module.css";
 
-const YAXIS_LABEL_CONFIG = {
-	value: "Conversion Rate, %",
-	angle: -90,
-	position: "insideLeft",
-	textAnchor: "middle",
+const YAXIS_CONFIG: YAxisProps = {
+	// Нижняя граница -> 0. Вверхняя граница -> округляем вверх до ближайшего числа, кратного 5
+	domain: [0, (dataMax: number) => Math.ceil((dataMax + 5) / 5) * 5],
+	label: {
+		value: "Conversion Rate, %",
+		angle: -90,
+		position: "insideLeft",
+		textAnchor: "middle",
+	},
 };
 
 export const Chart = () => {
@@ -43,7 +48,7 @@ export const Chart = () => {
 					<CartesianGrid />
 					{lines}
 					<XAxis dataKey="date" />
-					<YAxis label={YAXIS_LABEL_CONFIG} />
+					<YAxis {...YAXIS_CONFIG} />
 					<Tooltip />
 				</ChartContainer>
 			</ResponsiveContainer>
